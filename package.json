@@ -1,0 +1,23 @@
+{
+  "name": "faster-than-music",
+  "version": "0.0.1",
+  "description": "A game about a man who fight for his life.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chnapy/Faster-than-music.git"
+  },
+  "keywords": [
+    "game",
+    "music"
+  ],
+  "author": "Richard Haddad <contact@richardhaddad.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chnapy/Faster-than-music/issues"
+  },
+  "homepage": "https://github.com/Chnapy/Faster-than-music#readme"
+}
