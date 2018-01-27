@@ -1,7 +1,8 @@
 {
-  "name": "phaser-npm-webpack-typescript-starter-project",
-  "productName": "phaser-npm-webpack-typescript-starter-project",
-  "version": "1.8.6",
+  "name": "faster-than-music",
+  "productName": "faster-than-music",
+  "version": "0.0.1",
+  "description": "A game about a man who fight for his life.",
   "main": "electron-main.js",
   "scripts": {
     "webpack:dev": "webpack --config webpack.dev.config.js --progress --colors",
@@ -22,13 +23,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project.git"
+    "url": "git+https://github.com/Chnapy/Faster-than-music.git"
   },
-  "author": "Richard Roylance <https://github.com/rroylance>",
+  "author": "Richard Haddad <https://github.com/Chnapy>",
   "bugs": {
-    "url": "https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/issues"
+    "url": "https://github.com/Chnapy/Faster-than-music/issues"
   },
-  "homepage": "https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project#readme",
+  "keywords": [
+    "game",
+    "music"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Chnapy/Faster-than-music#readme",
   "dependencies": {
     "@types/node": "9.3.0",
     "@types/webfontloader": "1.6.29",
