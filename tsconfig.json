@@ -1,17 +1,15 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es2015",
-    "moduleResolution": "node",
-    "pretty": true,
-    "newLine": "LF",
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "module": "commonjs",
+    "target": "es6",
     "sourceMap": true,
-    "skipLibCheck": true,
-    "allowJs": true,
-    "jsx": "preserve"
-  }
+    "types": [
+      "node"
+    ]
+  },
+  "files": [
+    "./src/globals.d.ts",
+    "./src/app.ts",
+    "./node_modules/phaser-ce/typescript/phaser.comments.d.ts"
+  ]
 }

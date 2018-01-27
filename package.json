@@ -1,66 +1,59 @@
 {
-  "name": "faster-than-music",
-  "version": "0.0.1",
-  "description": "A game about a man who fight for his life.",
-  "main": "src/main.ts",
+  "name": "phaser-npm-webpack-typescript-starter-project",
+  "productName": "phaser-npm-webpack-typescript-starter-project",
+  "version": "1.8.6",
+  "main": "electron-main.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "prestart": "npm run build",
-    "start": "electron ./dist/main.js",
-    "pretest": "webpack --config webpack.tests.config.js",
-    "test": "jest"
+    "webpack:dev": "webpack --config webpack.dev.config.js --progress --colors",
+    "webpack:dist": "webpack --config webpack.dist.config.js --progress --colors",
+    "build:dev": "echo-cli 'Building DEV ...' && npm run webpack:dev && echo-cli 'Build Complete ✔'",
+    "build:dist": "echo-cli 'Building DIST ...' && npm run webpack:dist && echo-cli 'Build Complete ✔'",
+    "server:dev": "webpack-dev-server --config webpack.dev.config.js --open",
+    "server:dist": "webpack-dev-server --config webpack.dist.config.js --open",
+    "setupGameSize": "node ./scripts/setupGameSize.js",
+    "assets:dev": "node ./scripts/generateAssetsClass.js --dev",
+    "assets": "node ./scripts/generateAssetsClass.js",
+    "postinstall": "npm run setupGameSize",
+    "electron:dev": "npm run build:dev && electron .",
+    "electron:dist": "npm run build:dist && electron .",
+    "electron:pack:dev": "npm run build:dev && node ./scripts/packageElectronApp.js",
+    "electron:pack:dist": "npm run build:dist && node ./scripts/packageElectronApp.js",
+    "checkDepsVersions": "npm-check --skip-unused -u"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chnapy/Faster-than-music.git"
+    "url": "git+https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project.git"
   },
-  "keywords": [
-    "game",
-    "music"
-  ],
-  "author": "Richard Haddad <contact@richardhaddad.fr>",
-  "license": "MIT",
+  "author": "Richard Roylance <https://github.com/rroylance>",
   "bugs": {
-    "url": "https://github.com/Chnapy/Faster-than-music/issues"
+    "url": "https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/issues"
   },
-  "homepage": "https://github.com/Chnapy/Faster-than-music#readme",
+  "homepage": "https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project#readme",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
-  "devDependencies": {
-    "webpack": "^3.10.0",
-    "tslint-config-standard": "^7.0.0",
-    "tslint-loader": "^3.5.3",
-    "ts-loader": "^3.2.0",
-    "tslint": "^5.9.1",
-    "typescript": "^2.6.2",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015-node": "^6.1.1",
-    "babel-preset-react": "^6.24.1",
-    "standard": "^10.0.3",
-    "standard-loader": "^6.0.1",
-    "electron": "^1.7.10",
-    "html-webpack-plugin": "^2.30.1",
-    "@types/node": "^9.3.0",
-    "@types/react": "^16.0.34",
-    "@types/react-dom": "^16.0.3",
-    "jest": "^22.1.4",
-    "jest-junit": "^3.4.1",
-    "@types/jest": "^22.0.1"
-  },
-  "engines": {
-  },
-  "jest": {
-    "testRegex": "/__tests__/.*\\.jsx?",
-    "testResultsProcessor": "./node_modules/jest-junit"
-  },
-  "jest-junit": {
-    "suiteName": "jest tests",
-    "output": "./TEST-jest_junit.xml",
-    "classNameTemplate": "{classname}-{title}",
-    "titleTemplate": "{classname}-{title}",
-    "usePathForSuiteName": "true"
+    "@types/node": "9.3.0",
+    "@types/webfontloader": "1.6.29",
+    "clean-webpack-plugin": "0.1.17",
+    "commander": "2.13.0",
+    "copy-webpack-plugin": "4.3.1",
+    "echo-cli": "1.0.8",
+    "electron": "1.7.11",
+    "electron-packager": "10.1.1",
+    "expose-loader": "0.7.4",
+    "file-loader": "1.1.6",
+    "html-webpack-plugin": "2.30.1",
+    "npm-check": "5.5.2",
+    "phaser-ce": "2.10.0",
+    "pngjs-image": "0.11.7",
+    "shelljs": "0.8.1",
+    "ts-loader": "3.3.1",
+    "tslint": "5.9.1",
+    "tslint-loader": "3.5.3",
+    "typescript": "2.6.2",
+    "uglifyjs-webpack-plugin": "1.1.6",
+    "webfontloader": "1.6.28",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.11.1",
+    "webpack-synchronizable-shell-plugin": "0.0.6",
+    "xml2js": "0.4.19"
   }
 }
